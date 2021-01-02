@@ -10,9 +10,13 @@ class Pendulum {
             "0.8" : 80,
         }
 
+        this.gravity = 9.81;
+        this.lengthfactor = 0.01;
+
         this.info = document.querySelector('#info');
         this.board = document.querySelector('#board');
         this.peg = document.querySelector('#peg');
+        this.pendel = document.querySelector('#pendulum');
     }
 
     init() {
@@ -43,6 +47,10 @@ class Pendulum {
 
     setPeg(slot) {
         pendulum.peg.style.top = slot * 100 + "%";
+        pendulum.pendel.style.height = pendulum.pegPositions[slot] + "%";
+        var period = 2 * Math.PI * Math.sqrt((pendulum.pegPositions[slot] * pendulum.lengthfactor) / pendulum.gravity);
+        pendulum.log("Period: " + period);
+        pendulum.pendel.style.animationDuration = period + "s";
     }
 
     onBoardMouseMove(e) {
@@ -53,7 +61,6 @@ class Pendulum {
 
     onBoardMouseClick(e) {
         var posY = e.offsetY / pendulum.board.clientHeight
-        pendulum.log(posY);
         pendulum.setPeg(pendulum.findNearestSlot(posY));
     }
 
