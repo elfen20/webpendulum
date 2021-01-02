@@ -29,10 +29,10 @@
 }
 
 #board {
-    background-color: sienna;
+    background-color: rgb(100, 20, 20);
     position: relative;
     width: 2em;
-    height: 80%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -46,7 +46,7 @@
 
 #pegimage {
     position: relative;
-    background-color: red;
+    background-color: saddlebrown;
     width: 2em;
     height: 1em;
     left: 0;
@@ -55,7 +55,7 @@
 
 #board-front {
     position: relative;
-    background-color: seashell;
+    background-color: rgb(100, 20, 20);
     left: 40%;
     width: 20%;
     top: 0%;
@@ -89,7 +89,7 @@
     position: relative;
     left: 40%;
     width: 20%;
-    top: 1%;
+    top: 3%;
     height: 50%;
     transform-origin: center top;
     animation-name: swing;
