@@ -1,0 +1,38 @@
+/* 
+    pendulum.css
+    (c) Gernot Lenkner 2021
+*/
+
+.container {
+    position: relative;
+    user-select: none;
+    background-color: rgb(238, 238, 238);
+    width: 80vh;
+    height: 80vh;
+    padding: 2px;
+}
+
+#board {
+    background-color: sienna;
+    position: relative;
+    width: 2em;
+    height: 80%;
+    cursor: pointer;
+}
+
+#peg {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    left: 100%;
+    top: 50%;
+}
+
+#pegimage {
+    position: relative;
+    background-color: red;
+    width: 2em;
+    height: 1em;
+    left: 0;
+    top: -50%;
+}
