@@ -4,10 +4,11 @@
 class Pendulum {
     constructor() {
         this.pegPositions = {
-            "0.1" : 10,
-            "0.3" : 33,
+            "0.1" : 90,
+            "0.3" : 70,
             "0.5" : 50,
-            "0.8" : 80,
+            "0.8" : 20,
+            "0.95" : 5,
         }
 
         this.gravity = 9.81;
