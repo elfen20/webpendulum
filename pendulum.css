@@ -3,43 +3,76 @@
     (c) Gernot Lenkner 2021
 */
 
-.container {
-    position: relative;
+html {    
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: calc(100%-1em);
+}
+
+#wcol {
+    display: flex;
+    flex-direction: column;
     user-select: none;
-    background-color: rgb(238, 238, 238);
-    width: 80vh;
-    height: 80vh;
-    padding: 2px;
+    width: 100%;
+    height: 48vw;
 }
 
-#sideview {    
-    position: relative;
-    float: left;
-    background-color: rgb(255, 240, 240);
-    width: 20%;
-    height: 80%;
+#wrow {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
-#frontview {
-    position: relative;
-    float: left;
-    background-color:  rgb(240, 240, 255);
-    width: 80%;
-    height: 80%;
+#c1-side {    
+    position: relative; 
+    background-color: snow;
+    flex: 1;
 }
 
-#board {
+#c2-front {
+    background-color:cornsilk;
+    flex: 4;
+}
+
+#c3-sheet {
+    background-color:gainsboro;
+    flex: 3;
+
+}
+
+#board-side {
     background-color: rgb(100, 20, 20);
-    position: relative;
-    width: 2em;
+    width: 10%;
     height: 100%;
     cursor: pointer;
 }
 
+#affix-side {
+    position: absolute;
+    background-color: rgb(100, 20, 20);
+    width: 30%;
+    height: 3%;
+    left: 10%;
+    top: 1.5%;
+}
+
+#affix-string {
+    position: relative;
+    background-color: black;
+    width: 82%;
+    height: 2px;
+    left: 10%;
+    top: 50%;
+}
+
 #peg {
     position: relative;
-    width: 1em;
-    height: 1em;
+    background-color: springgreen;
+    width: 50%;
+    height: 1%;
     left: 100%;
     top: 50%;
 }
@@ -47,10 +80,18 @@
 #pegimage {
     position: relative;
     background-color: saddlebrown;
-    width: 2em;
-    height: 1em;
+    width: 100%;
+    height: 100%;
     left: 0;
     top: -50%;
+}
+
+#pendulum-side {
+    position: absolute;    
+    width: 15%;
+    height: 50%;
+    left: 30%;
+    top: 3%;
 }
 
 #board-front {
@@ -60,6 +101,14 @@
     width: 20%;
     top: 0%;
     height: 100%;
+}
+
+#peg-string {
+    position: absolute;
+    width: 5px;
+    height: 47%;
+    left: 11%;
+    top:3%;
 }
 
 .string {
