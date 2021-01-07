@@ -11,29 +11,46 @@
 </head>
 
 <body>
-    <h2>Fadenpendel nach Étienne Loulié</h2>
-    <div class="container">
-        <div id="sideview">
-            <div id="board">
-                <div id="peg">
-                    <div id="pegimage"></div>
+    <div id="wcol">
+        <h2>Fadenpendel nach Étienne Loulié</h2>
+        <div id="wrow">
+            <div id="c1-side">
+                <div id="board-side">
+                    <div id="peg">
+                        <div id="pegimage"></div>
+                    </div>
                 </div>
-            </div>    
-        </div>
-        <div id="frontview">
-            <div id="board-front">
-                <div id="pendulum">
+                <div id="affix-side">
+                    <div id="affix-string"></div>
+                </div>
+                <div id="peg-string">
+                    <div class="string"></div>
+                </div>
+                <div id="pendulum-side">
                     <div class="string"></div>
                     <div class="ball">
                         <svg viewBox="0 0 10 10" style="width:100%; height: 100%;">
-                            <circle cx="5" cy="5" r="5"/>
-                        </svg>    
+                            <circle cx="5" cy="5" r="5" />
+                        </svg>
                     </div>
                 </div>
-            </div>   
+            </div>
+            <div id="c2-front">
+                <div id="board-front">
+                    <div id="pendulum">
+                        <div class="string"></div>
+                        <div class="ball">
+                            <svg viewBox="0 0 10 10" style="width:100%; height: 100%;">
+                                <circle cx="5" cy="5" r="5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="c3-sheet"></div>
         </div>
+        <p id="info">Info</p>
     </div>
-    <p id="info">Info</p>
 </body>
 
 </html>
