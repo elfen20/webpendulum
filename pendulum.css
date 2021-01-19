@@ -68,16 +68,23 @@ body {
     top: 50%;
 }
 
-#peg {
+#peg-side {
     position: relative;
-    background-color: springgreen;
     width: 50%;
     height: 1%;
     left: 100%;
     top: 50%;
 }
 
-#pegimage {
+#peg-front {
+    position: relative;
+    width: 6%;
+    height: 1%;
+    left: 47%;
+    top: 50%;
+}
+
+.pegimage {
     position: relative;
     background-color: saddlebrown;
     width: 100%;
@@ -103,12 +110,18 @@ body {
     height: 100%;
 }
 
-#peg-string {
+.peg-string {
     position: absolute;
     width: 5px;
     height: 47%;
     left: 11%;
     top:3%;
+}
+
+#peg-string-front {
+    height: 46%;
+    left: 48%;
+    top: 4%;
 }
 
 .string {
