@@ -4,15 +4,15 @@
 class Pendulum {
     constructor() {
         this.pegPositions = {
-            "0.1" : 90,
-            "0.3" : 70,
-            "0.5" : 50,
-            "0.8" : 20,
-            "0.95" : 5,
-        }
+            "0.23" : {"BLen": 83, "BPM": 60, "Tempo": "Largo"},
+            "0.44" : {"BLen": 62, "BPM": 80, "Tempo": "Larghetto"},
+            "0.57" : {"BLen": 51, "BPM": 100, "Tempo": "Adagio"},
+            "0.71" : {"BLen": 36, "BPM": 140, "Tempo": "Andante"},
+            "0.75" : {"BLen": 31, "BPM": 160, "Tempo": "Allegro"},
+            "0.82" : {"BLen": 25, "BPM": 200, "Tempo": "Presto"},
+        };
 
         this.gravity = 9.81;
-        this.lengthfactor = 0.01;
 
         this.info = document.querySelector('#info');
         this.board = document.querySelector('#board-side');
@@ -55,9 +55,10 @@ class Pendulum {
         pendulum.pegFront.style.top = slot * 100 + "%";
         pendulum.pegStringSide.style.height = ((slot * 100)-3) + "%";
         pendulum.pegStringFront.style.height = ((slot * 100)-4) + "%";
-        pendulum.pendel.style.height = pendulum.pegPositions[slot] + "%";
-        pendulum.pendelSide.style.height = pendulum.pegPositions[slot] + "%";
-        var period = 2 * Math.PI * Math.sqrt((pendulum.pegPositions[slot] * pendulum.lengthfactor) / pendulum.gravity);
+        pendulum.pendel.style.height = pendulum.pegPositions[slot].BLen + "%";
+        pendulum.pendelSide.style.height = pendulum.pegPositions[slot].BLen + "%";
+        //var period = 2 * Math.PI * Math.sqrt((pendulum.pegPositions[slot].BLen * pendulum.lengthfactor) / pendulum.gravity);
+        var period = 60 / pendulum.pegPositions[slot].BPM;
         pendulum.log("Period: " + period);
         pendulum.pendel.style.animationDuration = period + "s";
     }
