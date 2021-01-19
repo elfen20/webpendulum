@@ -19,6 +19,7 @@ class Pendulum {
         this.peg = document.querySelector('#peg');
         this.pegString = document.querySelector('#peg-string');
         this.pendel = document.querySelector('#pendulum');
+        this.pendelside = document.querySelector('#pendulum-side');
     }
 
     init() {
@@ -49,8 +50,9 @@ class Pendulum {
 
     setPeg(slot) {
         pendulum.peg.style.top = slot * 100 + "%";
-        pendulum.pegString.style.height = slot * 80 + "%";
+        pendulum.pegString.style.height = ((slot * 100)-3) + "%";
         pendulum.pendel.style.height = pendulum.pegPositions[slot] + "%";
+        pendulum.pendelside.style.height = pendulum.pegPositions[slot] + "%";
         var period = 2 * Math.PI * Math.sqrt((pendulum.pegPositions[slot] * pendulum.lengthfactor) / pendulum.gravity);
         pendulum.log("Period: " + period);
         pendulum.pendel.style.animationDuration = period + "s";
