@@ -28,17 +28,14 @@ body {
 
 #c1-side {    
     position: relative; 
-    background-color: snow;
     flex: 1;
 }
 
 #c2-front {
-    background-color:cornsilk;
     flex: 4;
 }
 
 #c3-sheet {
-    background-color:gainsboro;
     flex: 3;
     margin: 1em;
 }
